@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mokavad · Deli Mediterráneo · Quilpué</title>
+  <meta name="description" content="Cocina mediterránea fresca y artesanal en Quilpué. Panuzzo, pizzas, falafel, kombucha y café de especialidad. Freire 1389, Stripcenter Novaterra.">
+  
+  <!-- SEO Open Graph -->
+  <meta property="og:title" content="Mokavad · Deli Mediterráneo · Quilpué">
+  <meta property="og:description" content="Cocina mediterránea fresca y artesanal en Quilpué. Panuzzo, pizzas y café de especialidad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tuzkahr-alt.github.io/mokavad-quilpue">
+  <meta property="og:image" content="images/hero_bg.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo" id="nav-logo">Moka<span>vad</span></div>
+    <ul class="nav-links" id="nav-links-list">
+      <li><a href="#nosotros" id="link-nosotros">Nosotros</a></li>
+      <li><a href="#menu" id="link-menu">Carta</a></li>
+      <li><a href="#resenas" id="link-resenas">Reseñas</a></li>
+      <li><a href="#info" id="link-info">Ubicación</a></li>
+    </ul>
+    <div class="nav-actions" id="nav-actions-container">
+      <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="Abrir pedido">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <a href="https://wa.me/56977994483?text=Hola%2C+quiero+hacer+un+pedido+en+Mokavad" class="nav-wa" id="nav-wa-direct" target="_blank">💬 Pedir</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero-section">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Quilpué · Quinta Región</p>
+      <h1 class="hero-title" id="main-hero-title">Sabores del<br>Mediterráneo,<br><em>en tu ciudad.</em></h1>
+      <p class="hero-body">Panuzzo, pizzas a la leña, kombucha artesanal y café de especialidad. Ingredientes frescos, recetas con historia, preparados el mismo día.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-terra" id="hero-view-menu-btn">Ver la carta</a>
+        <a href="https://wa.me/56977994483?text=Hola%2C+quiero+hacer+un+pedido" class="btn-ghost" id="hero-wa-btn" target="_blank">Pedir por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-right" style="background-image: url('images/hero_bg.png'); background-size: cover; background-position: center;">
+      <div class="hero-overlay"></div>
+      <div class="hero-badge">Abierto Lunes a Sábado</div>
+    </div>
+  </section>
+
+  <!-- ── STRIP ── -->
+  <div class="strip" id="features-strip">
+    <div class="strip-item">Cocina mediterránea</div>
+    <div class="strip-item">Falafel & Panuzzo</div>
+    <div class="strip-item">Café de especialidad</div>
+    <div class="strip-item">Kombucha artesanal</div>
+    <div class="strip-item">Pedidos por WhatsApp</div>
+    <div class="strip-item">Delivery disponible</div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="nosotros">
+    <div class="about-inner">
+      <div class="about-visual" style="background-image: url('images/panuzzo.png'); background-size: cover; background-position: center; border-radius: 4px;">
+        <div class="about-card-accent">
+          <div class="big">4.6</div>
+          <div class="small">★ en Google</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="label-chip">Nuestra historia</p>
+        <h2 class="about-title" id="about-heading">Hecho con<br><em>cariño y dedicación.</em></h2>
+        <p class="about-body">Mokavad nació de la pasión por la gastronomía mediterránea — esa cocina de tradición que huele a especias aromáticas, aceite de oliva extra virgen y pan crujiente recién horneado.</p>
+        <p class="about-body">En Quilpué construimos un espacio cálido donde cada plato se prepara al momento, respetando recetas tradicionales pero con un toque local único. Desde nuestros cannolis crujientes hasta el emblemático panuzzo de res deshebrada, todo lleva el mismo cuidado artesanal.</p>
+        <p class="about-body highlight-text">Un rincón tranquilo para comer bien, disfrutar el momento y compartir sin apuro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MENÚ ── -->
+  <section class="menu" id="menu">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <p class="menu-eyebrow">Lo que preparamos</p>
+        <h2 class="menu-title">La carta</h2>
+        
+        <!-- Category Filters -->
+        <div class="menu-filters" id="menu-filters">
+          <button class="filter-btn active" data-filter="all">Todo</button>
+          <button class="filter-btn" data-filter="pizzas">Pizzas (33cm)</button>
+          <button class="filter-btn" data-filter="sandwiches">Sándwiches & Panuzzos</button>
+          <button class="filter-btn" data-filter="cafeteria">Cafetería & Dulces</button>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        
+        <!-- Pizzas -->
+        <div class="menu-card" data-category="pizzas" data-id="p1" data-name="Pizza La Fiorentina" data-price="14500">
+          <div class="menu-card-img" style="background-image: url('images/pizza_fiorentina.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Pizza La Fiorentina</h3>
+              <span class="menu-card-price">$14.500</span>
+            </div>
+            <p class="menu-card-desc">Salsa pomodoro de la casa, mozzarella, queso de cabra, espinaca fresca, champiñones laminados y trozos de lomo liso grillados.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="pizzas" data-id="p2" data-name="Pizza Capra ai Carciofo" data-price="14300">
+          <div class="menu-card-img" style="background-image: url('images/pizza_fiorentina.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Pizza Capra ai Carciofo</h3>
+              <span class="menu-card-price">$14.300</span>
+            </div>
+            <p class="menu-card-desc">Salsa pomodoro, mozzarella, queso de cabra, corazones de alcachofa, aceitunas negras del valle y tomates deshidratados.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="pizzas" data-id="p3" data-name="Pizza Margherita" data-price="12000">
+          <div class="menu-card-img" style="background-image: url('images/pizza_fiorentina.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Pizza Margherita</h3>
+              <span class="menu-card-price">$12.000</span>
+            </div>
+            <p class="menu-card-desc">El clásico napolitano. Salsa de tomates seleccionados, queso pecorino romano, mozzarella fior di latte, albahaca fresca y aceite de oliva.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="pizzas" data-id="p4" data-name="Pizza Funghi e Fichi" data-price="12000">
+          <div class="menu-card-img" style="background-image: url('images/pizza_fiorentina.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Pizza Funghi e Fichi</h3>
+              <span class="menu-card-price">$12.000</span>
+            </div>
+            <p class="menu-card-desc">Combinación sofisticada de salsa de tomate pomodoro, mozzarella, champiñones París, higos secos seleccionados y queso azul premium.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <!-- Sándwiches & Panuzzos -->
+        <div class="menu-card" data-category="sandwiches" data-id="s1" data-name="Panuzzo de Res Deshebrada" data-price="10400">
+          <div class="menu-card-img" style="background-image: url('images/panuzzo.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Panuzzo de Res Deshebrada</h3>
+              <span class="menu-card-price">$10.400</span>
+            </div>
+            <p class="menu-card-desc">Pan artesanal crujiente de masa madre relleno con jugosa carne de res deshebrada a fuego lento, rúcula fresca y salsas mediterráneas.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="sandwiches" data-id="s2" data-name="Sándwich Española" data-price="12000">
+          <div class="menu-card-img" style="background-image: url('images/panuzzo.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Sándwich Española</h3>
+              <span class="menu-card-price">$12.000</span>
+            </div>
+            <p class="menu-card-desc">Panuzzo crujiente de la casa con mechada de vacuno Angus extra tierna, tomate laminado, palta fresca molida y aderezos especiales.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="sandwiches" data-id="s3" data-name="Sándwich Lomo-Luco" data-price="9500">
+          <div class="menu-card-img" style="background-image: url('images/panuzzo.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Sándwich Lomo-Luco</h3>
+              <span class="menu-card-price">$9.500</span>
+            </div>
+            <p class="menu-card-desc">Nuestra versión premium en pan de la casa. Lomo liso de vacuno a la plancha con una porción generosa de queso mantecoso derretido.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="sandwiches" data-id="s4" data-name="Sándwich Capresse" data-price="8500">
+          <div class="menu-card-img" style="background-image: url('images/panuzzo.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Sándwich Capresse</h3>
+              <span class="menu-card-price">$8.500</span>
+            </div>
+            <p class="menu-card-desc">Frescura vegetariana. Mozzarella en rodajas, tomates cherry jugosos, albahaca de huerta, pesto artesanal de albahaca y nueces.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="sandwiches" data-id="s5" data-name="Sándwich Champi-Lucco" data-price="8500">
+          <div class="menu-card-img" style="background-image: url('images/panuzzo.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Sándwich Champi-Lucco</h3>
+              <span class="menu-card-price">$8.500</span>
+            </div>
+            <p class="menu-card-desc">Especialidad vegetariana. Champiñones parís salteados con especias finas y fundidos con una capa gruesa de queso mantecoso.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <!-- Cafetería & Dulces -->
+        <div class="menu-card" data-category="cafeteria" data-id="c1" data-name="Latte Macchiato" data-price="3900">
+          <div class="menu-card-img" style="background-image: url('images/coffee.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Latte Macchiato</h3>
+              <span class="menu-card-price">$3.900</span>
+            </div>
+            <p class="menu-card-desc">Taza alta con tres capas perfectas: leche caliente vaporizada, espresso concentrado de especialidad y microespuma sedosa.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="cafeteria" data-id="c2" data-name="Ristretto" data-price="2920">
+          <div class="menu-card-img" style="background-image: url('images/coffee.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Ristretto</h3>
+              <span class="menu-card-price">$2.920</span>
+            </div>
+            <p class="menu-card-desc">Extracción corta de espresso. Muy concentrado, con notas dulces y ácidas más pronunciadas y cuerpo sedoso.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="cafeteria" data-id="c3" data-name="Puro Chocolate Suizo 72%" data-price="3900">
+          <div class="menu-card-img" style="background-image: url('images/coffee.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Puro Chocolate Suizo 72%</h3>
+              <span class="menu-card-price">$3.900</span>
+            </div>
+            <p class="menu-card-desc">Chocolate espeso de especialidad elaborado con cacao suizo al 72%. Ideal para los amantes del sabor amargo e intenso.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="cafeteria" data-id="c4" data-name="Cannoli Siciliano" data-price="3200">
+          <div class="menu-card-img" style="background-image: url('images/cannoli.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Cannoli Siciliano</h3>
+              <span class="menu-card-price">$3.200</span>
+            </div>
+            <p class="menu-card-desc">Postre siciliano clásico. Capa de masa crujiente frita rellena con crema de ricota dulce de la casa y chips de chocolate.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="cafeteria" data-id="c5" data-name="Brownie con Naranja" data-price="3000">
+          <div class="menu-card-img" style="background-image: url('images/cannoli.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Brownie con Naranja</h3>
+              <span class="menu-card-price">$3.000</span>
+            </div>
+            <p class="menu-card-desc">Bizcocho de chocolate húmedo elaborado en casa, aromatizado con ralladura de naranja natural y chips de chocolate blanco.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="cafeteria" data-id="c6" data-name="Kombucha Artesanal" data-price="3500">
+          <div class="menu-card-img" style="background-image: url('images/coffee.png');"></div>
+          <div class="menu-card-content">
+            <div class="menu-card-header">
+              <h3 class="menu-card-name">Kombucha Artesanal</h3>
+              <span class="menu-card-price">$3.500</span>
+            </div>
+            <p class="menu-card-desc">Té fermentado de elaboración propia. Sabores naturales y refrescantes que cambian según la temporada.</p>
+            <button class="add-to-cart-btn">Agregar al pedido 🛒</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-footer">
+        <p>¿Tienes dudas con alergias o quieres un ingrediente extra? Consúltanos directamente al hacer tu pedido por WhatsApp. Los precios e ingredientes están actualizados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESEÑAS ── -->
+  <section class="resenas" id="resenas">
+    <div class="resenas-inner">
+      <div class="resenas-header">
+        <p class="label-chip" style="text-align:center;">Lo que dicen</p>
+        <h2 class="resenas-title">Opiniones de nuestros clientes</h2>
+      </div>
+      <div class="resenas-grid">
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">"El panuzzo de res deshebrada para compartir es exquisito. Masa con burbujas de aire perfecta, crujiente y un relleno súper sazonado y abundante. Ideal para cenar."</p>
+          <div class="resena-author">Gonzalo Silva</div>
+          <div class="resena-origin">Google Maps · Quilpué</div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">"Un hallazgo en Quilpué. Fuimos por un café de especialidad y terminamos pidiendo pizza de masa madre. Excelente atención de Felipe, un ambiente súper íntimo y agradable."</p>
+          <div class="resena-author">María Paz Ugarte</div>
+          <div class="resena-origin">Google Maps · Quilpué</div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">"El mejor cannoli que he comido fuera de Italia. La masa de la galleta es súper fina y crocante, y el relleno no empalaga nada. Súper recomendado para merendar."</p>
+          <div class="resena-author">Camila Fernández</div>
+          <div class="resena-origin">Google Maps · Quilpué</div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">"Excelente relación calidad-precio. Las pizzas tienen un borde increíble y el queso de cabra le da un toque diferente. El servicio a domicilio por WhatsApp fue súper rápido."</p>
+          <div class="resena-author">Roberto Astudillo</div>
+          <div class="resena-origin">Google Maps · Quilpué</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INFO / MAP ── -->
+  <section class="info" id="info">
+    <div class="info-inner">
+      <div class="info-details">
+        <h2 class="info-title">Dónde Encontrarnos<br>y Horarios</h2>
+        <div class="info-blocks">
+          <div class="info-block">
+            <div class="info-block-label">Dirección</div>
+            <div class="info-block-val">Freire 1389, Local 1<br>Stripcenter Novaterra, Quilpué</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Horario de Atención</div>
+            <div class="info-block-val">
+              Lunes a Viernes: 10:00 – 19:00<br>
+              Sábado: 10:00 – 15:30<br>
+              Domingo: Cerrado
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Contacto y Pedidos</div>
+            <div class="info-block-val"><a href="https://wa.me/56977994483" id="info-wa-link">+56 9 7799 4483</a></div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Instagram</div>
+            <div class="info-block-val"><a href="https://www.instagram.com/mokavad_quilpue/" id="info-ig-link" target="_blank">@mokavad_quilpue</a></div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Envíos a Domicilio</div>
+            <div class="info-block-val">Encuéntranos en Rappi y Uber Eats, o haz tu pedido directo para retiro o delivery en nuestro chat.</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-container" id="map-container">
+        <!-- Interactive Google Map Embed -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.54148!2d-71.4331228!3d-33.0428033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d9810180770b%3A0x15fd1f685b842ea!2sMokavad%20Deli%20Mediterraneo!5e0!3m2!1ses!2scl!4v1718042456789!5m2!1ses!2scl" 
+          width="100%" 
+          height="100%" 
+          style="border:0; border-radius: 4px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          id="google-maps-iframe"
+          title="Ubicación de Mokavad Deli Mediterraneo">
+        </iframe>
+        <a href="https://www.google.com/maps/place/Mokavad+Deli+Mediterraneo/@-33.0428033,-71.4331228,17z" target="_blank" class="map-overlay-btn" id="map-directions-btn">Cómo llegar con GPS ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACTO CTA ── -->
+  <section class="cta" id="cta-section">
+    <h2 class="cta-title">¿Tienes hambre?</h2>
+    <p class="cta-sub">Arma tu carrito arriba o contáctanos por WhatsApp para consultar la especialidad del día.</p>
+    <div class="cta-actions">
+      <button class="btn-white" id="cta-open-cart-btn">Armar pedido 🛒</button>
+      <a href="https://www.instagram.com/mokavad_quilpue/" class="btn-white-outline" id="cta-ig-btn" target="_blank">Ver fotos en Instagram 📸</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-logo">Mokavad</div>
+    <div class="footer-links" id="footer-links-container">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#menu">Carta</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#info">Ubicación</a>
+      <a href="https://www.instagram.com/mokavad_quilpue/" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-copy">© 2026 Mokavad Deli Mediterráneo · Freire 1389, Local 1, Quilpué · Sitio web rediseñado y mejorado</div>
+  </footer>
+
+  <!-- ── SHOPPING CART DRAWER ── -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-drawer-header">
+      <h2 id="cart-title">Tu Pedido</h2>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Cerrar pedido">&times;</button>
+    </div>
+    
+    <div class="cart-drawer-items" id="cart-drawer-items">
+      <!-- Added items will be injected here by JS -->
+      <div class="cart-empty-msg" id="cart-empty-msg">
+        <span class="cart-empty-icon">🛒</span>
+        <p>Tu carrito está vacío. Agrega platos del menú para armar tu pedido.</p>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal:</span>
+        <span class="cart-total-price" id="cart-total-price">$0</span>
+      </div>
+
+      <div class="cart-form-group">
+        <label for="order-method" class="cart-label">Método de entrega:</label>
+        <select id="order-method" class="cart-select">
+          <option value="retiro">Retiro en local (Freire 1389)</option>
+          <option value="delivery">Envío a domicilio (Delivery)</option>
+        </select>
+      </div>
+
+      <div class="cart-form-group" id="delivery-address-group" style="display: none;">
+        <label for="order-address" class="cart-label">Dirección de despacho:</label>
+        <input type="text" id="order-address" class="cart-input" placeholder="Ej: Calle Principal 123, Quilpué">
+      </div>
+
+      <div class="cart-form-group">
+        <label for="order-notes" class="cart-label">Notas adicionales:</label>
+        <textarea id="order-notes" class="cart-textarea" placeholder="Ej: Sin cebolla, salsas extras, etc."></textarea>
+      </div>
+
+      <button class="cart-submit-btn" id="cart-submit-btn">
+        <span>Pedir por WhatsApp</span>
+        <span class="whatsapp-btn-icon">💬</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── FLOATING WHATSAPP BUTTON ── -->
+  <button class="wa-float" id="wa-float-btn" title="Ver pedido" aria-label="Ver pedido">
+    <span class="wa-float-icon">💬</span>
+    <span class="wa-float-badge" id="wa-float-badge">0</span>
+  </button>
+
+  <!-- Script -->
+  <script src="index.js"></script>
+</body>
+</html>
