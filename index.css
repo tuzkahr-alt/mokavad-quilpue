@@ -80,12 +80,25 @@ nav {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--sand);
   letter-spacing: -0.01em;
   cursor: pointer;
+}
+
+.logo-img {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--terra);
+  background: var(--white);
+  padding: 1px;
 }
 
 .nav-logo span {
@@ -873,10 +886,23 @@ footer {
 }
 
 .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-serif);
   font-size: 1.3rem;
   color: var(--sand);
   font-weight: 700;
+}
+
+.footer-logo-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--terra);
+  background: var(--white);
+  padding: 1px;
 }
 
 .footer-links {
